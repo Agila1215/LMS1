@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enroll Now | STARVERSA LMS</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(120deg,#e0f7fa,#e3f2fd,#ede7f6,#f3e5f5);
+    background-size:400% 400%;
+    animation:gradientBG 12s ease infinite;
+    scroll-behavior:smooth;
+  }
+
+  @keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+  }
+
+  /* --- Header/Nav --- */
+  header{
+    position:fixed;top:0;width:100%;z-index:10;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:15px 80px;backdrop-filter:blur(10px);
+    animation:slideDown 0.8s ease-in-out;
+  }
+
+  @keyframes slideDown{
+    from{transform:translateY(-100px);opacity:0;}
+    to{transform:translateY(0);opacity:1;}
+  }
+
+  .logo{
+    color:#007BFF;font-size:22px;font-weight:bold;letter-spacing:1px;
+    text-shadow:0 0 10px rgba(0,123,255,0.3);
+  }
+
+  nav a{
+    color:#333;text-decoration:none;margin:0 10px;font-weight:500;
+    transition:all .3s;
+  }
+
+  nav a:hover{
+    color:#007BFF;border-bottom:2px solid #007BFF;padding-bottom:3px;
+  }
+
+  /* --- Main Content --- */
+  main{padding-top:120px;text-align:center;}
+  h1{color:#007BFF;font-size:42px;margin-bottom:10px;}
+  p.subtitle{color:#555;font-size:18px;margin-bottom:40px;}
+
+  .enroll-container{
+    width:100%;
+    max-width:500px;
+    background:rgba(255,255,255,0.9);
+    margin:40px auto 80px;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.1);
+    animation:fadeInUp 1.2s ease;
+  }
+
+  @keyframes fadeInUp{
+    from{opacity:0;transform:translateY(30px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+
+  form{display:flex;flex-direction:column;}
+
+  label{margin-bottom:5px;font-weight:600;color:#333;}
+  input, select{
+    padding:10px;margin-bottom:20px;
+    border:1px solid #ccc;border-radius:8px;font-size:16px;
+    outline:none;transition:0.3s ease;
+  }
+  input:focus, select:focus{
+    border-color:#007BFF;box-shadow:0 0 6px rgba(0,123,255,0.4);
+  }
+
+  .submit-btn{
+    background:#007BFF;color:#fff;border:none;
+    padding:12px;border-radius:25px;font-size:18px;
+    cursor:pointer;transition:0.3s ease;
+  }
+  .submit-btn:hover{background:#0056b3;transform:scale(1.05);}
+
+  .back-btn{
+    display:block;margin-top:20px;text-align:center;
+    background:#007BFF;color:#fff;text-decoration:none;
+    padding:12px 30px;border-radius:30px;font-size:18px;
+    transition:all .3s;
+  }
+  .back-btn:hover{
+    background:#0056b3;transform:scale(1.05);
+    box-shadow:0 0 20px rgba(0,123,255,0.4);
+  }
+
+  .success-message{
+    text-align:center;color:green;font-weight:bold;margin-top:15px;display:none;
+  }
+
+  @media(max-width:768px){
+    header{flex-direction:column;padding:10px 20px;}
+    nav a{display:block;margin:8px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">STARVERSA LMS</div>
+  <nav>
+    <a href="home.html">HOME</a>
+    <a href="courses.html">COURSES</a>
+    <a href="teachers.html">TEACHERS</a>
+    <a href="certification.html">CERTIFICATIONS</a>
+    <a href="books.html">LIBRARY</a>
+  </nav>
+</header>
+
+<main>
+  <h1>📚 Enroll Now</h1>
+  <p class="subtitle">Fill out the form below to join your desired course</p>
+
+  <div class="enroll-container">
+    <form id="enrollForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+      <label for="course">Select Course</label>
+      <select id="course" name="course" required>
+        <option value="">-- Choose a Course --</option>
+        <option value="Web Development">Web Development</option>
+        <option value="AI & ML">AI</option>
+         <option value="GB">Graphic Design</option>
+          <option value="Cb">Chain Block</option>
+        <option value="Data Science">Data Science</option>
+        <option value="Cloud Computing">Cloud Computing</option>
+        <option value="Cybersecurity">Cybersecurity</option>
+      </select>
+
+      <button type="submit" class="submit-btn">Submit Enrollment</button>
+    </form>
+
+    <p id="successMessage" class="success-message">✅ Enrollment Submitted Successfully!</p>
+
+    <a href="courses.html" class="back-btn">⬅ Back to Courses</a>
+  </div>
+</main>
+
+<script>
+  document.getElementById('enrollForm').addEventListener('submit', function(event){
+    event.preventDefault();
+    document.getElementById('successMessage').style.display='block';
+    this.reset();
+    setTimeout(()=>{document.getElementById('successMessage').style.display='none';},3000);
+  });
+</script>
+
+</body>
+</html>

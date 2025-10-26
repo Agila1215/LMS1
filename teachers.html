@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certified Teachers | STARVERSA LMS</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  /* ===== BODY & BACKGROUND ===== */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #e0f7fa, #e3f2fd, #ede7f6, #f3e5f5);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    scroll-behavior: smooth;
+  }
+
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* ===== NAVIGATION ===== */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 80px;
+    backdrop-filter: blur(10px);
+  }
+
+  header .logo {
+    color: #007BFF;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+  }
+
+  nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+
+  nav a:hover {
+    color: #007BFF;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 3px;
+  }
+
+  header + section {
+    padding-top: 100px;
+  }
+
+  /* ===== PAGE HEADER ===== */
+  .page-header {
+    text-align: center;
+    padding: 120px 20px 40px 20px;
+    color: #222;
+    margin: 0 50px;
+    border-radius: 15px;
+  }
+
+  .page-header h1 {
+    font-size: 42px;
+    color: #007BFF;
+    margin-bottom: 10px;
+    animation: fadeIn 1.2s ease;
+  }
+
+  .page-header p {
+    font-size: 18px;
+    color: #555;
+    animation: fadeInUp 1.5s ease;
+  }
+
+  /* ===== TEACHER GRID ===== */
+  .teacher-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px 80px;
+    margin: 0 50px;
+  }
+
+  .teacher {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    width: 270px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeInCard 1.5s ease forwards;
+    opacity: 0;
+  }
+
+  .teacher:nth-child(odd) { animation-delay: 0.3s; }
+  .teacher:nth-child(even) { animation-delay: 0.6s; }
+
+  .teacher:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+  }
+
+  .teacher img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .teacher:hover img {
+    transform: scale(1.1);
+  }
+
+  .teacher h2 {
+    color: #007BFF;
+    margin: 15px 0 5px;
+    font-size: 1.2rem;
+  }
+
+  .teacher p {
+    color: #555;
+    font-size: 0.95rem;
+  }
+
+  /* ===== BACK BUTTON ===== */
+  .btn-container {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .back-btn {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+
+  .back-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,123,255,0.4);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: linear-gradient(135deg, #007BFF, #2c36eb);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 15px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInCard {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    header { flex-direction: column; padding: 10px 20px; }
+    nav a { display: block; margin: 8px 0; }
+    .teacher-container { padding-top: 100px; }
+    .page-header { margin: 100px 20px 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER / NAV ===== -->
+<header>
+  <div class="logo">STARVERSA LMS</div>
+  <nav>
+    <a href="home.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="courses.html">COURSES</a>
+    <a href="blog.html">BLOGS</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
+
+<!-- ===== PAGE TITLE ===== -->
+<section class="page-header">
+  <h1>Certified Teachers</h1>
+  <p>Meet our team of industry-certified educators guiding you to excellence</p>
+</section>
+
+<!-- ===== TEACHERS GRID ===== -->
+<div class="teacher-container">
+  <div class="teacher">
+    <img src="t1.jpg" alt="Dr. Priya Sharma">
+    <h2>Dr. Priya Sharma</h2>
+    <p>AI & Machine Learning Expert with 10+ years in deep learning and automation.</p>
+  </div>
+
+  <div class="teacher">
+    <img src="tb2.jpg" alt="Mr. Rahul Nair">
+    <h2>Mr. Rahul Nair</h2>
+    <p>Full-Stack Web Development Mentor focusing on modern frameworks and UX design.</p>
+  </div>
+
+  <div class="teacher">
+    <img src="t2.jpg" alt="Ms. Kavya Singh">
+    <h2>Ms. Kavya Singh</h2>
+    <p>Cloud Computing Specialist certified in AWS, Azure, and DevOps tools.</p>
+  </div>
+
+  <div class="teacher">
+    <img src="tb3.jpg" alt="Dr. Arjun Menon">
+    <h2>Dr. Arjun Menon</h2>
+    <p>Data Science Researcher passionate about predictive analytics and visualization.</p>
+  </div>
+
+  <div class="teacher">
+    <img src="t3.jpg" alt="Ms. Nisha Rao">
+    <h2>Ms. Nisha Rao</h2>
+    <p>Cybersecurity Trainer empowering professionals with ethical hacking skills.</p>
+  </div>
+
+  <div class="teacher">
+    <img src="tb4.jpg" alt="Mr. Aditya Verma">
+    <h2>Mr. Aditya Verma</h2>
+    <p>Blockchain Developer introducing learners to Web3 and decentralized systems.</p>
+  </div>
+
+  <div class="teacher">
+    <img src="t4.jpg" alt="Dr. Meera Joseph">
+    <h2>Dr. Meera Joseph</h2>
+    <p>AI Ethics & Robotics Educator promoting responsible use of smart technologies.</p>
+  </div>
+</div>
+
+<!-- ===== BACK BUTTON ===== -->
+<div class="btn-container">
+  <a href="home.html" class="back-btn">⬅ Back to Home</a>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  © 2025 STARVERSA LMS | All Rights Reserved
+</footer>
+
+</body>
+</html>

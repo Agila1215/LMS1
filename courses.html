@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses | STARVERSA LMS</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(120deg, #e0f7fa, #e3f2fd, #ede7f6, #f3e5f5);
+        background-size: 400% 400%;
+        animation: gradientBG 12s ease infinite;
+        scroll-behavior: smooth;
+    }
+
+    @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* ======= HEADER ======= */
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 80px;
+        backdrop-filter: blur(10px);
+    }
+
+    header .logo {
+        color: #007BFF;
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    }
+
+    nav a {
+        color: #333;
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: 500;
+        transition: all 0.3s;
+    }
+
+    nav a:hover {
+        color: #007BFF;
+        border-bottom: 2px solid #007BFF;
+        padding-bottom: 3px;
+    }
+
+    /* ======= HEADER TITLE ======= */
+    header + section {
+        padding-top: 100px;
+    }
+
+    .page-header {
+        text-align: center;
+        padding: 120px 20px 40px 20px;
+        color: #222;
+       
+        
+        margin: 0 50px;
+        border-radius: 15px;
+    }
+
+    .page-header h1 {
+        font-size: 42px;
+        margin-bottom: 10px;
+    }
+
+    .page-header p {
+        font-size: 18px;
+        color: #555;
+    }
+
+    /* ======= COURSE GRID ======= */
+    .course-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 40px 20px 80px;
+        margin: 0 50px;
+    }
+
+    .course-card {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        width: 300px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .course-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+    }
+
+    .course-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .course-info {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .course-info h3 {
+        color: #007BFF;
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .course-info p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 15px;
+    }
+
+    .enroll-btn {
+        background-color: #007BFF;
+        color: white;
+        text-decoration: none;
+        padding: 10px 25px;
+        border-radius: 25px;
+        transition: background 0.3s ease;
+    }
+
+    .enroll-btn:hover {
+        background-color: #0056b3;
+    }
+
+    /* ======= BACK BUTTON ======= */
+    .btn-container {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .back-btn {
+        background-color: #007BFF;
+        color: #fff;
+        padding: 12px 30px;
+        text-decoration: none;
+        border-radius: 30px;
+        font-size: 18px;
+        transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(0,123,255,0.4);
+    }
+
+    footer {
+        background: linear-gradient(135deg, #007BFF, #2c36eb);
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 15px;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 768px) {
+        header { flex-direction: column; padding: 10px 20px; }
+        nav a { display: block; margin: 8px 0; }
+        .course-container { padding-top: 100px; }
+        .page-header { margin: 100px 20px 0; }
+    }
+</style>
+</head>
+<body>
+
+<!-- ======= HEADER ======= -->
+<header>
+  <div class="logo">STARVERSA LMS</div>
+  <nav>
+    <a href="home.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="courses.html">COURSES</a>
+    <a href="blog.html">BLOGS</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
+
+<!-- ======= PAGE TITLE ======= -->
+<section class="page-header">
+  <h1>Our Courses</h1>
+  <p>Explore our range of professional, creative, and technical courses</p>
+</section>
+
+<!-- ======= COURSE GRID ======= -->
+<div class="course-container">
+  <div class="course-card">
+      <img src="wb.jpg" alt="Web Development">
+      <div class="course-info">
+          <h3>Web Development</h3>
+          <p>Master HTML, CSS, JS & frameworks to build responsive websites.</p>
+          <a href="wb.html" class="enroll-btn">Details</a>
+      </div>
+  </div>
+
+  <div class="course-card">
+      <img src="datasci.jpg" alt="Data Science">
+      <div class="course-info">
+          <h3>Data Science</h3>
+          <p>Learn Python, ML & AI with real-world projects and analysis.</p>
+          <a href="datasci.html" class="enroll-btn">Details</a>
+      </div>
+  </div>
+
+  <div class="course-card">
+      <img src="dig.jpg" alt="Digital Marketing">
+      <div class="course-info">
+          <h3>Digital Marketing</h3>
+          <p>Become an expert in SEO, content, and brand marketing online.</p>
+          <a href="dig.html" class="enroll-btn">Details</a>
+      </div>
+  </div>
+
+  <div class="course-card">
+      <img src="gd.jpg" alt="Graphic Design">
+      <div class="course-info">
+          <h3>Graphic Design</h3>
+          <p>Learn Photoshop, Illustrator, and create modern digital art.</p>
+          <a href="gd.html" class="enroll-btn">Details</a>
+      </div>
+  </div>
+
+  <div class="course-card">
+      <img src="cyber.jpg" alt="Cyber Security">
+      <div class="course-info">
+          <h3>Cyber Security</h3>
+          <p>Understand ethical hacking, cryptography & network defense.</p>
+          <a href="cyber.html" class="enroll-btn">Details</a>
+      </div>
+  </div>
+
+  <div class="course-card">
+      <img src="ai.jpg" alt="Artificial Intelligence">
+      <div class="course-info">
+          <h3>Artificial Intelligence</h3>
+          <p>Explore neural networks, deep learning, and smart automation.</p>
+          <a href="ai.html" class="enroll-btn">Details</a>
+      </div>
+  </div>
+
+  <div class="course-card">
+      <img src="appdeve.jpg" alt="App Development">
+      <div class="course-info">
+          <h3>App Development</h3>
+          <p>Build Android and iOS apps using Flutter or React Native.</p>
+          <a href="appdeve.html" class="enroll-btn">Details</a>
+      </div>
+  </div>
+
+  <div class="course-card">
+      <img src="cloud.jpg" alt="Cloud Computing">
+      <div class="course-info">
+          <h3>Cloud Computing</h3>
+          <p>Master AWS, Azure, and cloud deployment for enterprises.</p>
+          <a href="cloud.html" class="enroll-btn">Details</a>
+      </div>
+  </div>
+
+  <div class="course-card">
+      <img src="blockchain.jpg" alt="Blockchain">
+      <div class="course-info">
+          <h3>Blockchain Technology</h3>
+          <p>Understand blockchain, smart contracts, and crypto trends.</p>
+          <a href="chain.html" class="enroll-btn">Details</a>
+      </div>
+  </div>
+</div>
+
+<!-- ======= BACK BUTTON ======= -->
+<div class="btn-container">
+  <a href="home.html" class="back-btn">⬅ Back to Home</a>
+</div>
+
+<!-- ======= FOOTER ======= -->
+<footer>
+  © 2025 STARVERSA LMS | All Rights Reserved
+</footer>
+
+</body>
+</html>

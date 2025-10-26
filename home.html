@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STARVERSA LMS</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f9;
+      animation: fadeInBody 1.5s ease-in;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 80px;
+      
+      animation: slideDown 1.2s ease;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-80px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    header .logo {
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 20px;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    nav a:hover {
+      border-bottom: 2px solid #fff;
+      padding-bottom: 3px;
+    }
+
+    .btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      margin: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+      text-decoration: none;
+    }
+
+    .btn:hover { background-color: #0056b3; transform: scale(1.05); }
+
+    .apply { background-color: #28a745; }
+    .apply:hover { background-color: #1e7e34; }
+
+    .register { background-color: #ff5722; }
+    .register:hover { background-color: #e64a19; }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,80,0.6), rgba(0,0,100,0.6)), url('ehome3.jpg');
+      background-size: cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 0 20px;
+      animation: fadeInHero 2s ease;
+    }
+
+    @keyframes fadeInHero {
+      from { opacity: 0; transform: scale(1.05); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .hero h1 { font-size: 40px; margin-bottom: 15px; }
+    .hero p { font-size: 18px; max-width: 700px; }
+
+    section { padding: 80px 50px; background-color: #fff; text-align: center; }
+
+    section h2 {
+      font-size: 28px;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .services {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .service-box {
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+      opacity: 0;
+      animation: slideUpBox 1s forwards;
+    }
+
+    @keyframes slideUpBox {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .service-box:nth-child(1){ animation-delay: 0.2s; }
+    .service-box:nth-child(2){ animation-delay: 0.4s; }
+    .service-box:nth-child(3){ animation-delay: 0.6s; }
+    .service-box:nth-child(4){ animation-delay: 0.8s; }
+
+    .service-box:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.3); }
+
+    .service-box img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .service-box:hover img {
+      transform: scale(1.1);
+    }
+
+    .service-box h3 { margin: 15px 0 10px; color: #007BFF; }
+
+    footer {
+      background: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      animation: fadeInFooter 1.5s ease;
+    }
+
+    @keyframes fadeInFooter {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; padding: 10px 20px; }
+      nav a { display: block; margin: 8px 0; }
+    }
+  </style>
+</head>
+<body>
+ 
+
+
+  <header>
+    <div class="logo">STARVERSA LMS</div>
+    <nav>
+      <a href="home.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="courses.html">COURSES</a>
+      <a href="blog.html">BLOGS</a>
+      <a href="contact.html">CONTACT</a>
+      
+    </nav>
+     <div id="profile" style="margin-left:20px; color:white; font-family:Poppins; display:flex; align-items:center;">
+    <span id="welcomeMsg" style="margin-right:10px;"></span>
+    <button id="logoutBtn" style="background:#ff5722; color:white; border:none; padding:5px 12px; border-radius:8px; cursor:pointer;">Logout</button>
+  </div>
+  </header>
+
+  <script>
+  window.onload = function(){
+    const admin = localStorage.getItem("adminName");
+    const student = localStorage.getItem("studentName");
+
+    if(!admin && !student){
+      alert("Access denied! Please login or register first.");
+      window.location.href = "role.html";
+    } else {
+      // Display user name
+      const userName = admin ? admin : student;
+      document.getElementById("welcomeMsg").textContent = "Welcome, " + userName;
+    }
+
+    // Logout with confirmation
+    document.getElementById("logoutBtn").addEventListener("click", function(){
+      const confirmLogout = confirm("Are you sure you want to logout?");
+      if(confirmLogout){
+        localStorage.removeItem("adminName");
+        localStorage.removeItem("studentName");
+        alert("You have been logged out!");
+        window.location.href = "role.html";
+      }
+    });
+  }
+</script>
+
+  <section class="hero">
+    <h1>WELCOME TO STARVERSA</h1>
+    <p>At STARVERSA Learning Management System, we believe education is the foundation of success.</p>
+    <p>Our mission is to empower students with knowledge, skills, and values to excel in academics and life. Join us and start your journey toward a brighter tomorrow.</p>
+    <br>
+    <div>
+      <a href="courses.html" class="btn apply">Explore Courses</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="services">
+      <a href="trending.html" class="service-box">
+        <img src="course.jpg" alt="Trending Courses" />
+        <h3>Trending Courses</h3>
+      </a>
+
+      <a href="books.html" class="service-box">
+        <img src="book.jpg" alt="Books and Library" />
+        <h3>Books & Library</h3>
+      </a>
+
+      <a href="teachers.html" class="service-box">
+        <img src="teachercertifi.jpg" alt="Certified Teachers" />
+        <h3>Certified Teachers</h3>
+      </a>
+
+      <a href="certification.html" class="service-box">
+        <img src="certification.jpg" alt="Certification" />
+        <h3>Certification</h3>
+      </a>
+    </div>
+  </section>
+
+  <footer>© 2025 STARVERSA</footer>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | STARVERSA LMS</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #007bff, #00bcd4);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 350px;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    label {
+      font-size: 16px;
+    }
+
+    .role {
+      margin: 10px 0;
+    }
+
+    button {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #1e7e34;
+    }
+
+    .note {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #f0f0f0;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Register to STARVERSA LMS</h2>
+
+    <input type="text" id="name" placeholder="Enter your name" /><br>
+    <input type="password" id="password" placeholder="Enter password" /><br>
+
+    <div class="role">
+      <label><input type="radio" name="role" value="student" checked> Student</label>
+     
+    </div>
+
+    <button onclick="registerUser()">Register</button>
+
+    <p class="note">Already registered? <a href="role.html">Go to Login</a></p>
+  </div>
+
+  <script>
+    function registerUser() {
+      const name = document.getElementById("name").value.trim();
+      const pass = document.getElementById("password").value.trim();
+      const role = document.querySelector('input[name="role"]:checked').value;
+
+      if (name === "" || pass === "") {
+        alert("Please fill all fields!");
+        return;
+      }
+
+      // Save details
+      if (role === "admin") {
+        localStorage.setItem("adminName", name);
+      } else {
+        localStorage.setItem("studentName", name);
+      }
+
+      alert("Registration successful! Redirecting to Home page...");
+      window.location.href = "home.html";
+    }
+  </script>
+
+</body>
+</html>

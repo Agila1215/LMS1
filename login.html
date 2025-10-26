@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STARVERSA LMS - Login</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #28a745, #007bff, #6f42c1, #ff5722);
+    background-size: 400% 400%;
+    animation: bgmove 7s ease infinite;
+  }
+  @keyframes bgmove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .container {
+    background: rgba(255,255,255,0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    width: 350px;
+  }
+  h2 { color: #28a745; margin-bottom: 15px; }
+  input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  button:hover { background: #1e7e34; }
+  a { display: block; margin-top: 15px; color: #007bff; text-decoration: none; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Enter Username" required>
+    <input type="password" id="password" placeholder="Enter Password" required>
+    <button onclick="loginUser()">Login</button>
+    <a href="register.html">New user? Register here</a>
+  </div>
+
+  <script>
+    function loginUser() {
+      const user = localStorage.getItem("starversaUser");
+      const pass = localStorage.getItem("starversaPass");
+
+      const inputUser = document.getElementById("username").value;
+      const inputPass = document.getElementById("password").value;
+
+      if (!user || !pass) {
+        alert("Please register first!");
+        window.location.href = "register.html";
+      } else if (inputUser === user && inputPass === pass) {
+        alert("Login Successful!");
+        window.location.href = "home.html";
+      } else {
+        alert("Invalid username or password!");
+      }
+    }
+  </script>
+</body>
+</html>

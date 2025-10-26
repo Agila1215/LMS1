@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Development Course | STARVERSA LMS</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(120deg, #e0f7fa, #e3f2fd, #ede7f6, #f3e5f5);
+        background-size: 400% 400%;
+        animation: gradientBG 12s ease infinite;
+        scroll-behavior: smooth;
+        transition: background 1s ease-in-out;
+    }
+
+    @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* ===== HEADER NAVBAR ===== */
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 80px;
+        backdrop-filter: blur(10px);
+    }
+
+    header .logo {
+        color: #007BFF;
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    }
+
+    nav a {
+        color: #333;
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: 500;
+        transition: all 0.3s;
+    }
+
+    nav a:hover {
+        color: #007BFF;
+        border-bottom: 2px solid #007BFF;
+        padding-bottom: 3px;
+    }
+
+    /* ===== COURSE CONTAINER ===== */
+    .course-container {
+        max-width: 900px;
+        margin: 120px auto 60px auto;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        backdrop-filter: blur(5px);
+    }
+
+    .course-container h2 {
+        color: #007BFF;
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 34px;
+    }
+
+    .course-container p {
+        color: #555;
+        line-height: 1.7;
+        font-size: 17px;
+        text-align: justify;
+    }
+
+    .details img {
+        display: block;
+        margin: 25px auto;
+        max-width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+        transition: transform 0.4s ease;
+    }
+
+    .details img:hover {
+        transform: scale(1.05);
+    }
+
+    .details strong {
+        color: #333;
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        color: white;
+        background-color: #007BFF;
+        margin-top: 25px;
+        transition: 0.3s;
+        font-size: 16px;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);
+    }
+
+    .back-btn {
+        background-color: #333;
+        margin-left: 10px;
+    }
+
+    /* ===== EXTRA DETAILS SECTION ===== */
+    .extra-section {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 50px 40px;
+        margin: 30px auto;
+        border-radius: 15px;
+        max-width: 900px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .extra-section h3 {
+        color: #007BFF;
+        margin-bottom: 15px;
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .extra-section ul {
+        list-style: none;
+        margin: 20px 0;
+        padding: 0;
+    }
+
+    .extra-section ul li {
+        background: url('https://cdn-icons-png.flaticon.com/512/845/845646.png') no-repeat left center;
+        background-size: 20px;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        font-size: 17px;
+        color: #444;
+    }
+    .enroll-btn {
+        background-color: #007BFF;
+        color: white;
+        text-decoration: none;
+        padding: 10px 25px;
+        border-radius: 25px;
+        transition: background 0.3s ease;
+    }
+
+    .enroll-btn:hover {
+        background-color: #0056b3;
+    }
+
+    footer {
+        background: linear-gradient(135deg, #007BFF, #2c36eb);
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 15px;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+        margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+        header { flex-direction: column; padding: 10px 20px; }
+        nav a { display: block; margin: 8px 0; }
+        .course-container, .extra-section { margin: 100px 20px 30px 20px; padding: 25px; }
+    }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="logo">STARVERSA LMS</div>
+  <nav>
+    <a href="home.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="courses.html">COURSES</a>
+    <a href="blog.html">BLOGS</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
+
+<!-- ===== COURSE CONTENT ===== -->
+<div class="course-container">
+    <h2>Web Development</h2>
+    <p>This comprehensive course teaches you to design, build, and deploy professional, responsive websites. From basic HTML and CSS to advanced JavaScript frameworks, you’ll master both front-end and back-end development skills essential for modern web projects.</p>
+
+    <div class="details">
+        <img src="wb.jpg" alt="Web Development Course">
+        <p><strong>Purpose:</strong> Empower learners to create real-world applications and become industry-ready developers.</p>
+        <p><strong>Duration:</strong> 6 Months</p>
+        <p><strong>Course Fees:</strong> ₹25,000</p>
+        <p><strong>Mode:</strong> Online & Offline Options</p><br>
+    <a href="enroll.html" class="enroll-btn">Enroll Now</a>
+    </div>
+
+    
+</div>
+
+<!-- ===== EXTRA SECTIONS ===== -->
+<div class="extra-section">
+    <h3>Course Overview</h3>
+    <p>This Web Development course covers everything from foundational web technologies to advanced frameworks. You will learn to design, develop, and deploy dynamic, user-friendly websites and web applications.</p>
+</div>
+
+<div class="extra-section">
+    <h3>Key Features</h3>
+    <ul>
+        <li>Hands-on projects and real-world case studies</li>
+        <li>Experienced instructors with industry expertise</li>
+        <li>Interactive coding sessions and assessments</li>
+        <li>Career support and placement assistance</li>
+        <li>Lifetime access to learning materials</li>
+    </ul>
+</div>
+
+<div class="extra-section">
+    <h3>Advantages of Learning Web Development</h3>
+    <ul>
+        <li>High demand for web developers globally</li>
+        <li>Freelance and remote job opportunities</li>
+        <li>Ability to create your own portfolio and business sites</li>
+        <li>Strong foundation for future technologies like AI and Cloud</li>
+        <li>Boosts creativity and logical problem-solving</li>
+    </ul>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  © 2025 STARVERSA LMS | All Rights Reserved
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Blog | STARVERSA LMS</title>
+<style>
+/* Global Styles */
+*{margin:0; padding:0; box-sizing:border-box;}
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(120deg,#e0f7fa,#e3f2fd,#ede7f6,#f3e5f5);
+    background-size:400% 400%;
+    animation:gradientBG 12s ease infinite;
+    scroll-behavior:smooth;
+}
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Header and Navigation */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 80px;
+    backdrop-filter:blur(10px);
+    z-index:10;
+}
+header .logo{
+    color:#007BFF;
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:1px;
+    text-shadow:0 0 10px rgba(0,123,255,0.3);
+}
+nav a{
+    color:#333;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:500;
+    transition:all 0.3s;
+}
+nav a:hover{
+    color:#007BFF;
+    border-bottom:2px solid #007BFF;
+    padding-bottom:3px;
+}
+
+/* Blog Section */
+.hero{
+    margin-top:90px;
+    text-align:center;
+    padding:50px 20px 30px;
+    color:#333;
+}
+.hero h1{
+    font-size:2.8rem;
+    color:#007BFF;
+    margin-bottom:10px;
+}
+.hero p{
+    font-size:17px;
+    color:#555;
+}
+
+.blog-container{
+    max-width:1200px;
+    margin:40px auto 60px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    padding:0 20px;
+}
+.blog-card{
+    background:rgba(255,255,255,0.95);
+    border-radius:15px;
+    box-shadow:0 6px 25px rgba(0,0,0,0.1);
+    overflow:hidden;
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+.blog-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,123,255,0.3);
+}
+.blog-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+.blog-content{
+    padding:20px;
+}
+.blog-content h3{
+    color:#007BFF;
+    font-size:20px;
+    margin-bottom:10px;
+}
+.blog-content p{
+    color:#555;
+    line-height:1.6;
+    font-size:15px;
+}
+.read-btn{
+    display:inline-block;
+    margin-top:15px;
+    background-color:#007BFF;
+    color:white;
+    padding:8px 18px;
+    border-radius:25px;
+    text-decoration:none;
+    transition:background 0.3s ease, transform 0.3s ease;
+}
+.read-btn:hover{
+    background-color:#0056b3;
+    transform:scale(1.05);
+}
+
+/* Back Button */
+.back-btn{
+    display:block;
+    width:fit-content;
+    margin:60px auto;
+    background-color:#333;
+    color:white;
+    padding:12px 25px;
+    border-radius:25px;
+    text-decoration:none;
+    transition:background-color 0.3s, transform 0.3s;
+}
+.back-btn:hover{
+    background-color:#000;
+    transform:scale(1.05);
+}
+
+/* Footer */
+footer{
+    background:linear-gradient(135deg,#007BFF,#2c36eb);
+    color:white;
+    text-align:center;
+    padding:20px 0;
+    font-size:14px;
+    box-shadow:0 -2px 10px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media(max-width:768px){
+    header{flex-direction:column;padding:10px 20px;}
+    nav a{display:block;margin:8px 0;}
+    .hero h1{font-size:2.2rem;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">STARVERSA LMS</div>
+  <nav>
+    <a href="home.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="courses.html">COURSES</a>
+    <a href="blog.html">BLOGS</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
+
+<section class="hero">
+    <h1>Our Latest Blogs</h1>
+    <p>Insights, updates, and learning resources from STARVERSA LMS experts</p>
+</section>
+
+<section class="blog-container">
+
+    <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7" alt="Web Development">
+        <div class="blog-content">
+            <h3>5 Tips to Become a Web Developer</h3>
+            <p>Learn essential steps to start your journey in web development, from mastering HTML to building real-world projects.</p>
+            
+        </div>
+    </div>
+
+    <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Data Science">
+        <div class="blog-content">
+            <h3>The Power of Data Science in 2025</h3>
+            <p>Discover how data-driven insights are transforming industries and why learning Data Science is a smart move for your career.</p>
+          
+        </div>
+    </div>
+
+    <div class="blog-card">
+        <img src="dig.jpg" alt="Digital Marketing">
+        <div class="blog-content">
+            <h3>Boost Your Career with Digital Marketing</h3>
+            <p>Explore how social media, SEO, and paid advertising can help you become a marketing pro in today’s digital world.</p>
+            
+        </div>
+    </div>
+
+    <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87" alt="Cyber Security">
+        <div class="blog-content">
+            <h3>Cyber Security: The Digital Shield</h3>
+            <p>Understand how cyber experts protect networks from attacks and why it’s one of the most in-demand careers today.</p>
+            
+        </div>
+    </div>
+
+    <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1503602642458-232111445657" alt="Graphic Design">
+        <div class="blog-content">
+            <h3>Design Like a Pro: The World of Graphic Design</h3>
+            <p>From color psychology to layout balance, explore the creative process behind powerful graphic design and branding visuals.</p>
+            
+        </div>
+    </div>
+
+    <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995" alt="Artificial Intelligence">
+        <div class="blog-content">
+            <h3>How AI is Shaping the Future</h3>
+            <p>Artificial Intelligence is transforming industries, automating workflows, and redefining innovation — learn how it works.</p>
+            
+        </div>
+    </div>
+
+    <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Cloud Computing">
+        <div class="blog-content">
+            <h3>Rise of Cloud Computing</h3>
+            <p>Cloud is the backbone of modern IT — explore AWS, Azure, and GCP trends shaping the future of data storage and scalability.</p>
+           
+        </div>
+    </div>
+
+    <div class="blog-card">
+        <img src="blockchain.jpg" alt="Blockchain">
+        <div class="blog-content">
+            <h3>Blockchain Beyond Cryptocurrency</h3>
+            <p>Blockchain technology isn’t just for crypto — learn how it powers transparency, trust, and decentralization across industries.</p>
+           
+        </div>
+    </div>
+
+    <div class="blog-card">
+        <img src="uiux.jpg" alt="UI UX">
+        <div class="blog-content">
+            <h3>UI/UX Design Trends in 2025</h3>
+            <p>Discover new design principles, interaction patterns, and usability trends that shape intuitive digital experiences.</p>
+            
+        </div>
+    </div>
+
+</section>
+
+<a href="home.html" class="back-btn">⬅ Back to Home</a>
+
+<footer>
+  © 2025 STARVERSA LMS | All Rights Reserved
+</footer>
+
+</body>
+</html>

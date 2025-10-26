@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Books & Library | STARVERSA LMS</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(120deg,#e0f7fa,#e3f2fd,#ede7f6,#f3e5f5);
+    background-size:400% 400%;
+    animation:gradientBG 12s ease infinite;
+    scroll-behavior:smooth;
+  }
+
+  @keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+  }
+
+  header{
+    position:fixed;top:0;width:100%;z-index:10;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:15px 80px;backdrop-filter:blur(10px);
+  }
+
+  .logo{
+    color:#007BFF;font-size:22px;font-weight:bold;letter-spacing:1px;
+    text-shadow:0 0 10px rgba(0,123,255,0.3);
+  }
+
+  nav a{
+    color:#333;text-decoration:none;margin:0 10px;font-weight:500;
+    transition:all .3s;
+  }
+
+  nav a:hover{
+    color:#007BFF;border-bottom:2px solid #007BFF;padding-bottom:3px;
+  }
+
+  main{padding-top:120px;text-align:center;}
+  h1{color:#007BFF;font-size:42px;margin-bottom:10px;}
+  p.subtitle{color:#555;font-size:18px;margin-bottom:40px;}
+
+  /* ===== BOOK CONTAINER ===== */
+  .book-container{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:30px;
+    padding:20px 20px 80px;margin:0 50px;
+  }
+
+  .book-card{
+    background:rgba(255,255,255,0.95);
+    width:300px;border-radius:15px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.1);
+    overflow:hidden;
+    animation:fadeInUp 1.2s ease;
+    transition:transform .3s, box-shadow .3s;
+  }
+
+  .book-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 8px 25px rgba(0,123,255,0.3);
+  }
+
+  .book-card img{
+    width:100%;height:200px;object-fit:cover;
+  }
+
+  .book-info{
+    padding:20px;text-align:center;
+  }
+
+  .book-info h3{color:#007BFF;margin-bottom:8px;}
+  .book-info p{color:#444;font-size:15px;margin-bottom:15px;line-height:1.6;}
+  .ref-link{
+    display:inline-block;background:#007BFF;color:#fff;
+    text-decoration:none;padding:8px 18px;border-radius:25px;
+    transition:background .3s;
+  }
+  .ref-link:hover{background:#0056b3;}
+
+  @keyframes fadeInUp{
+    from{opacity:0;transform:translateY(30px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+
+  .btn-container{text-align:center;margin-bottom:60px;}
+  .back-btn{
+    background:#007BFF;color:#fff;padding:12px 30px;
+    text-decoration:none;border-radius:30px;font-size:18px;
+    transition:all .3s;
+  }
+  .back-btn:hover{
+    background:#0056b3;transform:scale(1.05);
+    box-shadow:0 0 20px rgba(0,123,255,0.4);
+  }
+
+  footer{
+    background:linear-gradient(135deg,#007BFF,#2c36eb);
+    color:#fff;text-align:center;padding:20px 0;font-size:15px;
+    box-shadow:0 -2px 10px rgba(0,0,0,0.2);
+  }
+
+  @media(max-width:768px){
+    header{flex-direction:column;padding:10px 20px;}
+    nav a{display:block;margin:8px 0;}
+    .book-container{margin:0 20px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">STARVERSA LMS</div>
+  <nav>
+    <a href="home.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="courses.html">COURSES</a>
+    <a href="blog.html">BLOG</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
+
+<main>
+  <h1>📘 STARVERSA Digital Library</h1>
+  <p class="subtitle">Explore essential Computer Science books and trusted reference links</p>
+
+  <div class="book-container">
+    <div class="book-card">
+      <img src="b1.jpg" alt="HTML CSS Book">
+      <div class="book-info">
+        <h3>HTML & CSS: Design and Build Websites</h3>
+        <p>By Jon Duckett – a beginner-friendly guide for web development fundamentals.</p>
+        <a href="https://www.w3schools.com/html/" target="_blank" class="ref-link">Reference</a>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="b2.jpg" alt="JavaScript Book">
+      <div class="book-info">
+        <h3>JavaScript: The Good Parts</h3>
+        <p>By Douglas Crockford – a must-read for mastering the JavaScript language core.</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="ref-link">Reference</a>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="b3.jpg" alt="Python Programming">
+      <div class="book-info">
+        <h3>Python Crash Course</h3>
+        <p>By Eric Matthes – practical projects to learn Python programming quickly.</p>
+        <a href="https://docs.python.org/3/tutorial/" target="_blank" class="ref-link">Reference</a>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="b4.jpg" alt="Data Structures">
+      <div class="book-info">
+        <h3>Data Structures & Algorithms in Python</h3>
+        <p>By Michael T. Goodrich – a detailed guide to efficient data handling and coding.</p>
+        <a href="https://visualgo.net/en" target="_blank" class="ref-link">Reference</a>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="b5.jpg" alt="Computer Networks">
+      <div class="book-info">
+        <h3>Computer Networking: A Top-Down Approach</h3>
+        <p>By Kurose & Ross – an in-depth study of modern networking systems and protocols.</p>
+        <a href="https://www.geeksforgeeks.org/computer-network-tutorials/" target="_blank" class="ref-link">Reference</a>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="b6.jpg" alt="Operating Systems Book">
+      <div class="book-info">
+        <h3>Operating System Concepts</h3>
+        <p>By Abraham Silberschatz – the foundation book for understanding OS design.</p>
+        <a href="https://www.javatpoint.com/operating-system-tutorial" target="_blank" class="ref-link">Reference</a>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="ai.jpg" alt="AI Book">
+      <div class="book-info">
+        <h3>Artificial Intelligence: A Modern Approach</h3>
+        <p>By Stuart Russell & Peter Norvig – the gold standard text for AI learners.</p>
+        <a href="https://ai.google/education/" target="_blank" class="ref-link">Reference</a>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="b8.jpg" alt="Database Book">
+      <div class="book-info">
+        <h3>Database System Concepts</h3>
+        <p>By Silberschatz, Korth, & Sudarshan – essential for understanding DBMS principles.</p>
+        <a href="https://www.tutorialspoint.com/dbms/index.htm" target="_blank" class="ref-link">Reference</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-container">
+    <a href="home.html" class="back-btn">⬅ Back to Home</a>
+  </div>
+</main>
+
+<footer>
+  © 2025 STARVERSA LMS | All Rights Reserved
+</footer>
+</body>
+</html>

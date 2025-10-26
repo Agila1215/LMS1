@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber Security Course | STARVERSA LMS</title>
+<style>
+/* Same CSS as Web Development page with gradient animation */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #e0f7fa, #e3f2fd, #ede7f6, #f3e5f5);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    scroll-behavior: smooth;
+}
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+header { position: fixed; top:0; width:100%; display:flex; justify-content:space-between; align-items:center; padding:15px 80px; backdrop-filter: blur(10px); z-index:10; }
+header .logo { color:#007BFF; font-size:22px; font-weight:bold; letter-spacing:1px; text-shadow:0 0 10px rgba(0,123,255,0.3);}
+nav a { color:#333; text-decoration:none; margin:0 10px; font-weight:500; transition:all 0.3s; }
+nav a:hover { color:#007BFF; border-bottom:2px solid #007BFF; padding-bottom:3px; }
+.course-container { max-width:900px; margin:120px auto 60px auto; background:rgba(255,255,255,0.9); padding:40px; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.1); backdrop-filter:blur(5px); }
+.course-container h2 { color:#007BFF; text-align:center; margin-bottom:15px; font-size:34px; }
+.course-container p { color:#555; line-height:1.7; font-size:17px; text-align:justify; }
+.details img { display:block; margin:25px auto; max-width:100%; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.25); transition:transform 0.4s ease; }
+.details img:hover { transform:scale(1.05);}
+.details strong { color:#333; }
+.enroll-btn {
+        background-color: #007BFF;
+        color: white;
+        text-decoration: none;
+        padding: 10px 25px;
+        border-radius: 25px;
+        transition: background 0.3s ease;
+    }
+
+    .enroll-btn:hover {
+        background-color: #0056b3;
+    }
+.btn { display:inline-block; padding:12px 30px; border-radius:30px; text-decoration:none; color:white; background-color:#007BFF; margin-top:25px; transition:0.3s; font-size:16px; }
+.btn:hover { background-color:#0056b3; transform:scale(1.05); box-shadow:0 0 20px rgba(0,123,255,0.4);}
+.back-btn { background-color:#333; margin-left:10px; }
+.extra-section { background:rgba(255,255,255,0.95); padding:50px 40px; margin:30px auto; border-radius:15px; max-width:900px; box-shadow:0 6px 20px rgba(0,0,0,0.1);}
+.extra-section h3 { color:#007BFF; margin-bottom:15px; font-size:26px; text-align:center;}
+.extra-section ul { list-style:none; margin:20px 0; padding:0; }
+.extra-section ul li { background: url('https://cdn-icons-png.flaticon.com/512/845/845646.png') no-repeat left center; background-size:20px; padding-left:35px; margin-bottom:12px; font-size:17px; color:#444; }
+footer { background: linear-gradient(135deg,#007BFF,#2c36eb); color:white; text-align:center; padding:20px 0; font-size:15px; box-shadow:0 -2px 10px rgba(0,0,0,0.2); margin-top:50px;}
+@media (max-width:768px) { header { flex-direction:column; padding:10px 20px;} nav a{display:block; margin:8px 0;} .course-container,.extra-section{margin:100px 20px 30px 20px; padding:25px;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">STARVERSA LMS</div>
+  <nav>
+    <a href="home.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="courses.html">COURSES</a>
+    <a href="blog.html">BLOGS</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
+
+<div class="course-container">
+  <h2>Cyber Security</h2>
+  <p>Learn to identify vulnerabilities, protect networks, and secure digital assets using ethical hacking, firewalls, and cybersecurity tools. Prepare for a career in information security and cyber threat management.</p>
+
+  <div class="details">
+    <img src="cyber.jpg" alt="Cyber Security Course">
+    <p><strong>Purpose:</strong> Train professionals to safeguard systems and data from cyberattacks.</p>
+    <p><strong>Duration:</strong> 6 Months</p>
+    <p><strong>Course Fees:</strong> ₹28,000</p>
+    <p><strong>Mode:</strong> Online & Offline Options</p><br>
+    <a href="enroll.html" class="enroll-btn">Enroll Now</a>
+  </div>
+
+  
+</div>
+
+<div class="extra-section">
+  <h3>Course Overview</h3>
+  <p>This Cyber Security course teaches network security, ethical hacking, risk assessment, and incident response. You'll gain hands-on experience to protect organizations from cyber threats.</p>
+</div>
+
+<div class="extra-section">
+  <h3>Key Features</h3>
+  <ul>
+    <li>Learn network defense, firewalls, and malware prevention</li>
+    <li>Hands-on labs with real-world hacking scenarios</li>
+    <li>Incident response and threat mitigation</li>
+    <li>Expert guidance from cybersecurity professionals</li>
+    <li>Certification upon completion</li>
+  </ul>
+</div>
+
+<div class="extra-section">
+  <h3>Advantages of Learning Cyber Security</h3>
+  <ul>
+    <li>High-demand job opportunities in IT security</li>
+    <li>Freelance and consulting possibilities</li>
+    <li>Protect personal and organizational digital assets</li>
+    <li>Prepare for certifications like CEH, CISSP</li>
+    <li>Develop critical problem-solving skills</li>
+  </ul>
+</div>
+
+<footer>
+  © 2025 STARVERSA LMS | All Rights Reserved
+</footer>
+
+</body>
+</html>
